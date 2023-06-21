@@ -1,5 +1,6 @@
 using System;
 using System.IO;
+using System.Collections.Generic;
 public class Journal
 {
     public List<Entry> _entries = new List<Entry>();
@@ -38,5 +39,11 @@ public class Journal
             AddEntry(entry);
             splitLines.ToList().Clear();
         }
+    }
+    public void ConvertToJson(string file)
+    {
+        var path = Path.Combine(Directory.GetCurrentDirectory(), file);
+        string json = new New.SerializeObject(_entries.ToArray());
+        File.WriteAllText(path, json);
     }
 }

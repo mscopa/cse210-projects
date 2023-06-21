@@ -28,6 +28,7 @@ class Program
             Console.WriteLine("3. Load");
             Console.WriteLine("4. Save");
             Console.WriteLine("5. Quit");
+            Console.WriteLine("6. Convert to Json");
             Console.Write("What would you like to do? ");
             choice = Console.ReadLine();
             if (choice == "1")
@@ -60,6 +61,12 @@ class Program
             else if (choice == "5")
             {
                 
+            }
+            else if (choice == "6")
+            {
+                Console.WriteLine("What is the filename?");
+                string file = Console.ReadLine();
+                journal.ConvertToJson(file);
             }
             else
             {
