@@ -42,8 +42,8 @@ public class Journal
     }
     public void ConvertToJson(string file)
     {
-        var path = Path.Combine(Directory.GetCurrentDirectory(), file);
-        string json = new New.SerializeObject(_entries.ToArray());
-        File.WriteAllText(path, json);
+        // var path = Path.Combine(Directory.GetCurrentDirectory(), file);
+        // string json = new New.SerializeObject(_entries.ToArray());
+        // File.WriteAllText(path, json);
     }
 }
